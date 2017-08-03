@@ -1,0 +1,38 @@
+/* =========================
+    GENERAL START
+===========================*/
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.intro {
+    background: url(../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    top: 0;
+    display: table;
+}
+.intro .inner {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    max-width: none;
+}
+.content {
+    max-width: 365px;
+    margin: 0 auto;
+    text-align: center;
+}
+.content h1 {
+    color: #F9F3F4;
+    font-size: 225%;
+}
+
+/* =========================
+    GENERAL END
+===========================*/
