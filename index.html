@@ -4,25 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="JavaScript, HTML, CSS">
+    <meta name="keywords" content="JavaScript, jQuery, HTML, CSS, Materialize CSS">
     <meta name="author" content="Zia">
     <meta name="Pomodoro Clock" content="Pomodoro Clock:  With this JavaScript application user can start a 25 minute pomodoro, and the timer will go off once 25 minutes has elapsed. The user can reset the clock for next pomodoro.">
     <title>Pomodoro Clock</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
     <section class="intro">
         <div class="inner">
-            <div class="content">
-                <h1>Pomodoro Clock</h1>
-                <div id="pomodoroClock">
-
+            <div class="row">
+                <div class="col s12 m8 l6 offset-m2 offset-l3">
+                    <div class="card purple lighten-3">
+                        <div class="card-content white-text">
+                            <h4 class="text-center">Pomodoro Clock</h4>
+                            <a id="munus" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">-</i></a>
+                            <span id="timer">555</span>
+                            <a id="plus" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">+</i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
 <!-- Custom JavaScript -->
 <script src="resources/js/main.js"></script>
 </body>
