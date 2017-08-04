@@ -12,18 +12,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="resources/css/style.css">
+    
 </head>
 <body>
     <section class="intro">
         <div class="inner">
             <div class="row">
                 <div class="col s12 m8 l6 offset-m2 offset-l3">
-                    <div class="card purple lighten-3">
+                    <div class="card green">
                         <div class="card-content white-text">
                             <div class="timeContent">
+                                
                                 <h3 class="text-center">Pomodoro Clock</h3>
                                 <button id="minus" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">-</i></button>
-                                <span id="timer">25:00</span>
+                                <span id="timerNumber">25</span>
                                 <button id="plus" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">+</i></button>
                                 <div class="circle"></div>
                                 <button id="reset" class="btn waves-effect waves-light red btn-large">Reset</button>
@@ -31,7 +33,7 @@
                             <div class="breakContent">
                                 <h4 class="text-center">Braak Time</h4>
                                 <button id="breakMinus" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">-</i></button>
-                                <span id="breakTimer">05:00</span>
+                                <span id="breakNumber">5</span>
                                 <button id="breakPlus" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">+</i></button>
                             </div>
                             <div class="start">
@@ -43,7 +45,7 @@
             </div>
         </div>
     </section>
-
+<audio id="alarm" src="resources/audios/alarm.mp3" type="audio/mpeg">
 
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>

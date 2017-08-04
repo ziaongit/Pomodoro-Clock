@@ -32,8 +32,11 @@ html, body {
 .timeContent, .breakContent, .start {
     text-align: center;
 }
-#timer, #breakTimer {
-    font-size: 50px;
+h3 {
+        margin: 1rem 0 1rem 0;
+}
+#timerNumber, #breakNumber {
+    font-size: 35px;
     padding-left: 50px;
     padding-right: 50px;
     vertical-align: -webkit-baseline-middle;
@@ -55,7 +58,7 @@ html, body {
     h4 {
         font-size: 1.9rem;
     }
-    #timer, #breakTimer {
+    #timerNumber, #breakNumber {
         font-size: 30px;
         padding-left: 20px;
         padding-right: 20px;
