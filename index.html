@@ -20,10 +20,23 @@
                 <div class="col s12 m8 l6 offset-m2 offset-l3">
                     <div class="card purple lighten-3">
                         <div class="card-content white-text">
-                            <h4 class="text-center">Pomodoro Clock</h4>
-                            <a id="munus" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">-</i></a>
-                            <span id="timer">555</span>
-                            <a id="plus" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">+</i></a>
+                            <div class="timeContent">
+                                <h3 class="text-center">Pomodoro Clock</h3>
+                                <button id="minus" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">-</i></button>
+                                <span id="timer">555</span>
+                                <button id="plus" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">+</i></button>
+                                <div class="circle"></div>
+                                <button id="reset" class="btn waves-effect waves-light red btn-large">Reset</button>
+                            </div>
+                            <div class="breakContent">
+                                <h4 class="text-center">Braak Time</h4>
+                                <button id="breakMinus" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">-</i></button>
+                                <span id="breakTimer">555</span>
+                                <button id="breakPlus" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">+</i></button>
+                            </div>
+                            <div class="start">
+                                <button id="start" class="btn waves-effect waves-light red btn-large">Start</button>
+                            </div>
                         </div>
                     </div>
                 </div>
