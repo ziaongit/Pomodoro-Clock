@@ -14,57 +14,105 @@ $(function(){
     
     
 
-    var countTimer = parseInt(timerNumber.html());
-    var breakTimer = parseInt(breakNumber.html());
+    var countTime = parseInt(timerNumber.html());
+    var breakTime = parseInt(breakNumber.html());
     
     // Minus button click event
     minus.click(function(){
-        if(countTimer>5){
-            countTimer -= 5;
-            timerNumber.html(countTimer);
+        if(countTime>5){
+            countTime -= 5;
+            timerNumber.html(countTime);
         }
         
     });
 
     // Plus button click event
     plus.click(function(){
-        countTimer += 5;
-        timerNumber.html(countTimer);
+        countTime += 5;
+        timerNumber.html(countTime);
     });
 
     // Break Minus button click event
     breakMinus.click(function(){
-        if(breakTimer>5){
-            breakTimer -= 5;
-            breakNumber.html(breakTimer);
+        if(breakTime>5){
+            breakTime -= 5;
+            breakNumber.html(breakTime);
         }
     });
 
     // Break Plus button click event
     breakPlus.click(function(){
-        breakTimer += 5;
-        breakNumber.html(breakTimer);
+        breakTime += 5;
+        breakNumber.html(breakTime);
     });
 
-    // Start button click event
-    start.click(function(){
-        var counter = setInterval(timer, 1000);
-
+    // Disable function 
+    function disable(){
         minus.attr('disabled', 'disabled');
         plus.attr('disabled', 'disabled');
         start.attr('disabled', 'disabled');
         breakMinus.attr('disabled', 'disabled');
         breakPlus.attr('disabled', 'disabled');
+    }
+
+    // Start button click event
+    start.click(function(){
+        var counter = setInterval(timer, 1000);
         
+        disable();
+
         function timer(){
-            countTimer--;
-            if(countTimer === 0){
+
+            countTime--;
+
+            timerNumber.html(countTime);
+
+            if(countTime === 0){
                 clearInterval(counter);
                 alarm.play();
+                var startBreak = setInterval(breakTimer, 1000);
             }
-            timerNumber.html(countTimer);
-            
+
+            function breakTimer() {
+
+                breakMinus.removeAttr("disabled"); 
+                breakPlus.removeAttr("disabled");
+                breakTime--;
+                
+                breakNumber.html(breakTime);
+                
+                if(breakTime === 0){
+                    clearInterval(startBreak);
+                    alarm.play();
+                    minus.removeAttr("disabled"); 
+                    plus.removeAttr("disabled");
+                    start.removeAttr("disabled");
+                }
+            }
+
+            // Reset click function
+            reset.click(function(){
+                minus.removeAttr("disabled"); 
+                plus.removeAttr("disabled");
+                breakMinus.removeAttr("disabled"); 
+                breakPlus.removeAttr("disabled");
+                start.removeAttr("disabled");
+                countTime = 25;
+                breakTime = 5;
+                timerNumber.html(countTime);
+                breakNumber.html(breakTime);
+                clearInterval(counter);
+                clearInterval(startBreak);
+            });
+
+
         }
+
     });
+
+
+
+
+    
     
 });
