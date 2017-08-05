@@ -84,9 +84,9 @@ $(function(){
                 if(breakTime === 0){
                     clearInterval(startBreak);
                     alarm.play();
-                    minus.removeAttr("disabled"); 
-                    plus.removeAttr("disabled");
-                    start.removeAttr("disabled");
+
+                    breakMinus.attr('disabled', 'disabled');
+                    breakPlus.attr('disabled', 'disabled');
                 }
             }
 
