@@ -11,39 +11,47 @@ $(function(){
     var breakNumber = $('#breakNumber');
     var breakMinus = $('#breakMinus');
     var breakPlus = $('#breakPlus');
-    
-    
 
-    var countTime = parseInt(timerNumber.html());
-    var breakTime = parseInt(breakNumber.html());
+    var countTime = 1500;
+    var breakTime = 300;
+
+    timerNumber.html(convertSecond(1500));
+    breakNumber.html(convertSecond(300));
+    
+    // Conver second funtion
+    function convertSecond(s){
+        var min = Math.floor(s / 60);
+        var sec = Math.floor(s % 60);
+        return min + ' : ' + sec;
+    }
     
     // Minus button click event
     minus.click(function(){
-        if(countTime>5){
-            countTime -= 5;
-            timerNumber.html(countTime);
+        if(countTime>30){
+            countTime -= 30;
+            timerNumber.html(convertSecond(countTime));
         }
         
     });
 
     // Plus button click event
     plus.click(function(){
-        countTime += 5;
-        timerNumber.html(countTime);
+        countTime += 30;
+        timerNumber.html(convertSecond(countTime));
     });
 
     // Break Minus button click event
     breakMinus.click(function(){
-        if(breakTime>5){
-            breakTime -= 5;
-            breakNumber.html(breakTime);
+        if(breakTime>30){
+            breakTime -= 30;
+            breakNumber.html(convertSecond(breakTime));
         }
     });
 
     // Break Plus button click event
     breakPlus.click(function(){
-        breakTime += 5;
-        breakNumber.html(breakTime);
+        breakTime += 30;
+        breakNumber.html(convertSecond(breakTime));
     });
 
     // Disable function 
@@ -65,7 +73,7 @@ $(function(){
 
             countTime--;
 
-            timerNumber.html(countTime);
+            timerNumber.html(convertSecond(countTime));
 
             if(countTime === 0){
                 clearInterval(counter);
@@ -79,7 +87,7 @@ $(function(){
                 breakPlus.removeAttr("disabled");
                 breakTime--;
                 
-                breakNumber.html(breakTime);
+                breakNumber.html(convertSecond(breakTime));
                 
                 if(breakTime === 0){
                     clearInterval(startBreak);
@@ -97,10 +105,10 @@ $(function(){
                 breakMinus.removeAttr("disabled"); 
                 breakPlus.removeAttr("disabled");
                 start.removeAttr("disabled");
-                countTime = 25;
-                breakTime = 5;
-                timerNumber.html(countTime);
-                breakNumber.html(breakTime);
+                countTime = 1500;
+                breakTime = 300;
+                timerNumber.html(convertSecond(countTime));
+                breakNumber.html(convertSecond(breakTime));
                 clearInterval(counter);
                 clearInterval(startBreak);
             });
