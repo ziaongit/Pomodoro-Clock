@@ -127,15 +127,8 @@ $(function(){
                 clearInterval(counter);
                 clearInterval(startBreak);
             });
-
-
         }
 
     });
 
-
-
-
-    
-    
 });
