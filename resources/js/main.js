@@ -22,7 +22,26 @@ $(function(){
     function convertSecond(s){
         var min = Math.floor(s / 60);
         var sec = Math.floor(s % 60);
-        return min + ' : ' + sec;
+        
+        if(sec<10 && min<10){
+            console.log('both zero')
+            return '0'+min + ' : ' + '0'+sec;
+            
+        }else if(sec<10){
+            console.log('sec zero')
+            return min + ' : ' + '0'+sec;
+            
+        }else if(min<10){
+            console.log('min zero')
+            return '0'+min + ' : ' + sec;
+            
+        }
+        else{
+            console.log('default')
+            return min + ' : ' + sec;
+            
+        }
+        
     }
     
     // Minus button click event
