@@ -24,7 +24,11 @@ html, body {
     max-width: none;
 }
 .card {
+    background-color: #06b81C;
     border-radius: 40px;
+}
+h3 {
+        margin: 1rem 0 1rem 0;
 }
 .card .card-content {
     padding: 10px;
@@ -32,21 +36,19 @@ html, body {
 .timeContent, .breakContent, .start {
     text-align: center;
 }
-h3 {
-        margin: 1rem 0 1rem 0;
-}
 #timerNumber, #breakNumber {
     font-size: 35px;
     padding-left: 50px;
     padding-right: 50px;
     vertical-align: -webkit-baseline-middle;
 }
-.circle {
-    background-color: #f44336;
+.bg-color {
+    background-color: #D52200 !important;
+}
+.pomodoro img {
     margin: 0 auto;
     width: 200px;
     height: 200px;
-    border-radius: 100px;
 }
 #reset, #start {
     margin-top: 5px;
